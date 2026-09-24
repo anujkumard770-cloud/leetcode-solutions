@@ -4,14 +4,22 @@ public:
 
         int j = 0;
 
-        for(int i=0; i<nums.size(); i++){
+        // for(int i=0; i<nums.size(); i++){
 
-            if(nums[j] == 0){
-                nums.erase(nums.begin() + j);
-                nums.push_back(0);
-            }else{
+        //     if(nums[j] == 0){
+        //         nums.erase(nums.begin() + j);
+        //         nums.push_back(0);
+        //     }else{
+        //         j++;
+        //     }
+        // }
+
+        for(int i=0; i<nums.size(); i++){
+            if(nums[i] != 0){
+                swap(nums[i], nums[j]);
                 j++;
             }
         }
+
     }
 };
